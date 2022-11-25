@@ -1,0 +1,56 @@
+table {
+    border: 1px solid #f5f5f5;
+    font-size: .75em;
+}
+
+#currentPasswordField {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+form label:last-of-type input {
+    margin-top: 0.25em;
+    margin-bottom: 0.5em;
+}
+
+@media (max-width: 1000px) {
+
+    .master-container div.flex div:not(.full) {
+        margin-bottom: 3em
+    }
+}
+
+.master-container article.card {
+    padding: 1em;
+}
+
+.master-container article.card h3 {
+    padding-top: 0;
+}
+
+.master-container div.flex article.card {
+    height: 115%;
+}
+
+.master-container article.card footer {
+    padding: 0;
+    position: absolute;
+    bottom: 0.5em;
+}
+
+
+.hover:hover {
+    box-shadow: 0 0 10px #b4b4b4;
+    background-color: transparent;
+}
+
+.wrong {
+    border: 1px solid #FF0000;
+    color: red;
+    box-shadow: inset 0px 0px 25px #ff6767;
+}
+
+.correct {
+    border: 1px solid #008000;
+    box-shadow: inset 0px 0px 25px #00b100;
+}

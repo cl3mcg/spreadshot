@@ -1,0 +1,123 @@
+@font-face {
+    font-family: TwemojiMozilla;
+    unicode-range: U+1F600-1F3F4;
+    src: url("../fonts/TwemojiMozilla.ttf") format('truetype');
+}
+
+* {
+    font-family: Arial, Helvetica, 'Liberation Sans', TwemojiMozilla, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: 0.3s;
+}
+
+.serif,
+.font-serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.monospace,
+.font-monospace {
+    font-family: Menlo, Monaco, Consolas, 'Ubuntu Mono', 'Courier New', monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: auto;
+}
+
+#master-navbar {
+    background-color: #f5f5f5;
+}
+
+#master-navbar:hover {
+    box-shadow: 0px 0px 10px #b4b4b4;
+}
+
+.account-nav-btn:hover {
+    color: #0074d9;
+}
+
+.logout-nav-btn:hover {
+    color: #ff4136
+}
+
+.master-container {
+    margin-top: 3em;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+h1.page-title {
+    text-align: center;
+}
+
+h2:nth-of-type(2),
+h2:nth-of-type(3) {
+    margin-top: 0.5em;
+    margin-bottom: 0
+}
+
+.text-center {
+    text-align: center;
+}
+
+img.img-logo {
+    height: 2em;
+}
+
+#framework div {
+    border-radius: 3px;
+    margin-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.hover:hover {
+    background-color: #f5f5f5;
+}
+
+li {
+    margin: 0%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.toast-container {
+    position: absolute;
+    top: 4.5em;
+    right: 0;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    width: 350px;
+}
+
+.toast-container article.success,
+.toast-container article.error,
+.toast-container article.warning,
+.toast-container article.info {
+    padding: 0;
+}
+
+.toast-container article.success header {
+    background-color: #a6ceab;
+    color: green;
+}
+
+.toast-container article.error header {
+    background-color: #cea6a6;
+    color: red;
+}
+
+.toast-container article.warning header {
+    background-color: #cec0a6;
+    color: orangered;
+}
+
+.toast-container article.info header {
+    background-color: #aaa6ce;
+    color: navy;
+}

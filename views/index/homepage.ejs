@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<%- include("../partials/cssBase.ejs") %>
+	</head>
+	<body>
+		<%-include("../partials/navbar.ejs")%>
+		<main class="container master-container">
+			<h1 class="page-title">Let's start great things here !</h1>
+			<h2>Introduction</h2>
+
+			Hello,
+			<br />
+			Welcome to this new boilerplate, it's basically a setup allowing new
+			projects to come to life.
+			<br />
+			By default, the app is configured with a simple setup allowing to start
+			projects easily.
+
+			<h2>Organization</h2>
+			The new project is organized with the following framework.
+			<div id="framework" class="flex one three-600">
+				<div class="text-center hover">
+					<h3>MongoDB</h3>
+					<img
+						class="img-logo"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/512px-MongoDB_Logo.svg.png"
+						alt="The MongoDB logo"
+					/>
+				</div>
+				<div class="text-center hover">
+					<h3>NodeJS</h3>
+					<img
+						class="img-logo"
+						src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
+						alt="The NodeJS logo"
+					/>
+				</div>
+				<div class="text-center hover">
+					<h3>Express</h3>
+					<img
+						class="img-logo"
+						src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png"
+						alt="The ExpressJS logo"
+					/>
+				</div>
+			</div>
+			<h2>Batteries included</h2>
+			The project includes the following tools to make the task even easier.
+			<div id="framework" class="flex one three-800">
+				<div class="text-center hover">
+					<div>
+						<h3>🔒 Safety</h3>
+					</div>
+					<div>
+						The app is covered by
+						<a href="https://www.npmjs.com/package/helmet">Helmet</a> and by
+						various protections against XSS and injections.
+					</div>
+				</div>
+				<div class="text-center hover">
+					<div>
+						<h3>💅 Styling</h3>
+					</div>
+					<div>
+						The app includes <a href="https://picnicss.com/">Picnic CSS</a> by
+						default and full emoji Unicode coverage with
+						<a href="https://twemoji.twitter.com/">Twemoji</a>.<br />
+						The project also relies on
+						<a href="https://fonts.bunny.net/">Bunny Fonts</a>.
+					</div>
+				</div>
+				<div class="text-center hover">
+					<div>
+						<h3>🗂 Organized</h3>
+					</div>
+					<div>
+						The app is organized as per guidelines from
+						<a href="https://www.udemy.com/course/the-web-developer-bootcamp/"
+							>The Web Developper Bootcamp</a
+						>
+						from
+						<a href="https://www.linkedin.com/in/coltsteele/">Colt Steele</a>.
+					</div>
+				</div>
+			</div>
+		</main>
+		<%-include("../partials/jsBase.ejs")%>
+	</body>
+</html>

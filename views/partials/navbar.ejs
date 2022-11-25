@@ -1,0 +1,19 @@
+<nav id="master-navbar">
+	<a href="/" class="brand">
+		<img class="logo" src="/icons/favicon.ico" />
+		<span>Boilerplate</span>
+	</a>
+	<!-- responsive-->
+	<input id="bmenub" type="checkbox" class="show" />
+	<label for="bmenub" class="burger pseudo button">Menu</label>
+	<div class="menu">
+		<a href="/about" class="pseudo button">About</a>
+		<a href="#" class="pseudo button">Contact</a>
+		<a <% if (currentUser) { %> href="/user/<%= currentUser.id %> "<% } else { %>href="/user/login"<% } %> class="pseudo button account-nav-btn">Account</a
+		>
+		<% if (currentUser) { %>
+		<a href="/user/logout" class="pseudo button logout-nav-btn">Log out</a>
+		<% } %>
+	</div>
+</nav>
+<%- include("../partials/flash.ejs") %>

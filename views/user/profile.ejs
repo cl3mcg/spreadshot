@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<%- include("../partials/cssBase.ejs") %>
+		<link rel="stylesheet" href="/css/profilePage/appProfilePage.css" />
+	</head>
+	<body>
+		<%- include("../partials/navbar.ejs") %>
+		<div class="container master-container">
+			<h1 class="page-title">User profile page</h1>
+			<main>
+				<div class="flex one three-1000">
+					<div class="full">
+						<h2>Account information</h2>
+						<div>
+							<table class="primary">
+								<thead>
+									<tr>
+									<th>Username</th>
+									<th><%= currentUser.username %></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>User ID</td>
+										<td class="font-monospace"><%= currentUser.id %></td>
+									</tr>
+									<tr>
+										<td>Email</td>
+										<td><%= currentUser.email %></td>
+									</tr>
+									<tr>
+										<td>Admin</td>
+										<td><% if (currentUser.isAdmin) {%>Yes<%} else { %>No<% } %></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="full"><h2>Modify account information</h2></div>
+					<div>
+						<article class="card" id="changeUsernameCard">
+							<h3>Change my Username</h3>
+							<form id="formChangeUsername" action="/user/<%= currentUser.id %>/changeUsername" method="post">
+								<label><input type="text" placeholder="New username" name="inputNewUsername" id="changeUsernameField1"></label>
+								<label><input type="text" placeholder="Confirm the new username" name="inputNewUsernameConfirm" id="changeUsernameField2"></label>
+							</form>
+							<footer>
+								<button type="submit" id="changeUsernameButton" form="formChangeUsername">Process changes</button>
+							</footer>
+						</article>
+					</div>
+					<div>
+						<article class="card" id="changeEmailCard">
+							<h3>Change my email</h3>
+							<form id="formChangeEmail" action="/user/<%= currentUser.id %>/changeEmail" method="post">
+								<label><input type="email" placeholder="New email" name="inputNewEmail" id="changeEmailField1"></label>
+								<label><input type="email" placeholder="Confirm the new email" name="inputNewEmailConfirm" id="changeEmailField2"></label>
+							</form>
+							<footer>
+								<button type="submit" id="changeEmailButton" form="formChangeEmail">Process changes</button>
+							</footer>
+						</article>
+					</div>
+					<div>
+						<article class="card" id="changePasswordCard">
+							<h3>Change my password</h3>
+							<form id="formChangePassword" action="/user/<%= currentUser.id %>/changePassword" method="post">
+								<label><input type="password" placeholder="Current password" name="inputCurrentPassword" id="currentPasswordField"></label>
+								<label><input type="password" placeholder="New password" name="inputNewPassword" id="changePasswordField1"></label>
+								<label><input type="password" placeholder="Confirm the new password" name="inputNewPasswordConfirm" id="changePasswordField2"></label>
+							</form>
+							<footer>
+								<button type="submit" id="changePasswordButton" form="formChangePassword">Process changes</button>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</main>
+		</div>
+		<%-include("../partials/jsBase.ejs")%>
+		<script src="/js/profilePage/appProfilePage.js"></script>
+	</body>
+</html>

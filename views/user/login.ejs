@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Project - Login Page</title>
+		<%- include("../partials/cssBase.ejs") %>
+		<link rel="stylesheet" href="/css/loginPage/appLoginPage.css" />
+	</head>
+
+	<body>
+		<%- include("../partials/navbar.ejs") %>
+		<main>
+			<div class="heroTitle">
+				<div class="title">
+					<h1>
+						<i
+							class="animate__animated animate__swing animate__slower oma oma-2x oma-waving-hand"
+						></i>
+						<br />
+						Hi there !
+					</h1>
+				</div>
+
+				<div class="content">
+					<article class="card" id="loginPanel">
+						<header>
+							<h3>Login</h3>
+							<button class="pseudo shyButton" id="gotoCreateButton">
+								Create an account
+							</button>
+						</header>
+						<form action="/user/login" method="post">
+							<fieldset>
+								<label
+									><input
+										autofocus
+										required
+										type="username"
+										placeholder="Username"
+										id="loginUsernameInput"
+										name="username"
+								/></label>
+								<label
+									><input
+										required
+										type="password"
+										placeholder="Password"
+										id="loginPasswordInput"
+										name="password"
+								/></label>
+								<label>
+									<input type="checkbox" name="loginRememberUser" checked />
+									<span class="checkable">Remember me</span>
+								</label>
+							</fieldset>
+							<footer>
+								<button type="submit" id="loginButton">Login</button>
+								<div id="loader">
+									<div class="spinner"></div>
+								</div>
+								<br />
+								<button class="pseudo shyButton" id="forgotButton">
+									I forgot my password
+								</button>
+							</footer>
+						</form>
+					</article>
+
+					<article class="card hide" id="createPanel">
+						<header>
+							<h3>Create an account</h3>
+							<button class="pseudo shyButton" id="gotoLoginButton1">
+								Back to login
+							</button>
+						</header>
+						<form action="/user/register" method="post">
+							<fieldset>
+								<label
+									data-tooltip="Your username will be used for login to your account"
+									class="tooltip-top"
+									><input
+										required
+										type="text"
+										placeholder="Choose a Username"
+										id="createUsernameInput"
+										name="createUsernameInput"
+								/></label>
+								<label
+									><input
+										required
+										type="email"
+										placeholder="Email"
+										id="createEmailInput"
+										name="createEmailInput"
+								/></label>
+								<label
+									><input
+										required
+										type="email"
+										placeholder="Confirm your email"
+										id="createConfirmEmailInput"
+										name="createConfirmEmailInput"
+								/></label>
+								<div class="flex two">
+									<div>
+										<label
+											><input
+												required
+												type="password"
+												placeholder="Password"
+												id="createPasswordInput"
+												name="createPasswordInput"
+										/></label>
+									</div>
+									<div class="passwordAdvise">Use a strong password !</div>
+								</div>
+							</fieldset>
+							<footer>
+								<button type="submit" id="createAccountButton">Submit</button>
+								<div id="loader">
+									<div class="spinner"></div>
+								</div>
+							</footer>
+						</form>
+					</article>
+
+					<article class="card hide" id="recoveryPanel">
+						<header>
+							<h3>Password recovery</h3>
+							<button class="pseudo shyButton" id="gotoLoginButton2">
+								Back to login
+							</button>
+						</header>
+						<form action="/user/recover" method="post">
+							<div>
+								Enter the email address linked to your account. <br />
+								An email will be sent to recover your password.
+							</div>
+							<fieldset>
+								<label
+									><input
+										required
+										type="email"
+										placeholder="Email"
+										id="recoveryEmailInput"
+										name="recoveryEmailInput"
+								/></label>
+							</fieldset>
+							<footer>
+								<button type="submit" id="recoveryButton">Recover</button>
+								<div id="loader">
+									<div class="spinner"></div>
+								</div>
+							</footer>
+						</form>
+					</article>
+				</div>
+			</div>
+		</main>
+
+		<div class="modal">
+			<input id="modal_1" type="checkbox" />
+			<label for="modal_1" class="overlay"></label>
+			<article>
+				<header>
+					<h3>Welcome !</h3>
+					<label for="modal_1" class="close">&times;</label>
+				</header>
+				<section class="content">
+					<span class="emoji">✅</span>
+					<h4>All set !</h4>
+					You will receive an email to activate your account. <br />
+					Check your mailbox <i class="oma oma-2x oma-incoming-envelope"></i>
+				</section>
+				<footer>
+					<label for="modal_1" class="button"> OK </label>
+				</footer>
+			</article>
+		</div>
+
+		<div class="modal">
+			<input id="modal_2" type="checkbox" />
+			<label for="modal_2" class="overlay"></label>
+			<article>
+				<header>
+					<h3>Password recovery</h3>
+					<label for="modal_2" class="close">&times;</label>
+				</header>
+				<section class="content">
+					<span class="emoji">✅</span>
+					<h4>All set !</h4>
+					You will receive an email to retrieve your password. <br />
+					Check your mailbox <i class="oma oma-2x oma-incoming-envelope"></i>
+				</section>
+				<footer>
+					<label for="modal_2" class="button"> OK </label>
+				</footer>
+			</article>
+		</div>
+		<%-include("../partials/jsBase.ejs")%>
+		<script src="/js/loginPage/appLoginPage.js"></script>
+	</body>
+</html>

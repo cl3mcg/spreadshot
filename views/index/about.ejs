@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<%- include("../partials/cssBase.ejs") %>
+	</head>
+	<body>
+		<%-include("../partials/navbar.ejs")%>
+		<div class="container master-container">
+			<h1 class="page-title">More details</h1>
+
+			<a href="/">Homepage</a>
+			<a href="/about/secret">Secret page</a>
+			<div id="framework" class="flex one three-600">
+				<div>
+					<h2>NPM packages included</h2>
+					Are included in the project the following packages:
+					<ul>
+						<li>connect-flash (0.1.1)</li>
+						<li>connect-mongo (4.6.0)</li>
+						<li>dotenv (16.0.3)</li>
+						<li>ejs-mate (4.0.0)</li>
+						<li>ejs (3.1.8)</li>
+						<li>exceljs (4.3.0)</li>
+						<li>express-mongo-sanitize (2.2.0)</li>
+						<li>express-session (1.17.3)</li>
+						<li>express (4.18.2)</li>
+						<li>helmet (6.0.0)</li>
+						<li>joi (17.7.0)</li>
+						<li>method-override (3.0.0)</li>
+						<li>mongoose (6.7.2)</li>
+						<li>multer (1.4.5-lts.1)</li>
+						<li>node-mailer (0.1.1)</li>
+						<li>nodemon (2.0.20)</li>
+						<li>passport-local-mongoose (7.1.2)</li>
+						<li>passport (0.6.0)</li>
+						<li>pdf-lib (1.17.1)</li>
+					</ul>
+				</div>
+				<div>
+					<h2>Imports</h2>
+					Are imported with CDN or files, the following tools:
+					<ul>
+						<li>Picnic CSS</li>
+						<li>Twemoji from Mozilla</li>
+						<li></li>
+					</ul>
+				</div>
+				<div>
+					<h2>Folder structure</h2>
+					Folders are organized as per below schema:<br />
+					<strong>Boilerplate</strong><br />
+					├── controllers<br />
+					├── models<br />
+					├── models<br />
+					└──
+				</div>
+			</div>
+		</div>
+		<%-include("../partials/jsBase.ejs")%>
+	</body>
+</html>
