@@ -5,7 +5,7 @@
 }
 
 * {
-    font-family: Arial, Helvetica, 'Liberation Sans', TwemojiMozilla, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Fira Sans', Arial, Helvetica, 'Liberation Sans', TwemojiMozilla, Oxygen, Ubuntu, Cantarell, sans-serif;
     transition: 0.3s;
 }
 
@@ -16,7 +16,11 @@
 
 .monospace,
 .font-monospace {
-    font-family: Menlo, Monaco, Consolas, 'Ubuntu Mono', 'Courier New', monospace;
+    font-family: 'Fira Code', Menlo, Monaco, Consolas, 'Ubuntu Mono', 'Courier New', monospace;
+}
+
+.font-small {
+    font-size: .75em;
 }
 
 html {

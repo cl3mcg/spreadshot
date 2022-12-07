@@ -262,3 +262,11 @@ h3 {
     }
     
 }
+
+@media (max-height: 670px) and (min-height: 500px){
+
+    div.title {
+        padding-top: 0.5em;
+    }
+    
+}
