@@ -17,11 +17,11 @@
 					<div class="full">
 						<h2>Account information</h2>
 						<div>
-							<table class="primary">
+							<table class="primary font-small">
 								<thead>
 									<tr>
-									<th>Username</th>
-									<th><%= currentUser.username %></th>
+										<th>Username</th>
+										<th><%= currentUser.username %></th>
 									</tr>
 								</thead>
 								<tbody>
@@ -35,7 +35,9 @@
 									</tr>
 									<tr>
 										<td>Admin</td>
-										<td><% if (currentUser.isAdmin) {%>Yes<%} else { %>No<% } %></td>
+										<td>
+											<% if (currentUser.isAdmin) {%>Yes<%} else { %>No<% } %>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -45,37 +47,109 @@
 					<div>
 						<article class="card" id="changeUsernameCard">
 							<h3>Change my Username</h3>
-							<form id="formChangeUsername" action="/user/<%= currentUser.id %>/changeUsername" method="post">
-								<label><input type="text" placeholder="New username" name="inputNewUsername" id="changeUsernameField1"></label>
-								<label><input type="text" placeholder="Confirm the new username" name="inputNewUsernameConfirm" id="changeUsernameField2"></label>
+							<form
+								id="formChangeUsername"
+								action="/user/<%= currentUser.id %>/changeUsername"
+								method="post"
+							>
+								<label
+									><input
+										type="text"
+										placeholder="New username"
+										name="inputNewUsername"
+										id="changeUsernameField1"
+								/></label>
+								<label
+									><input
+										type="text"
+										placeholder="Confirm the new username"
+										name="inputNewUsernameConfirm"
+										id="changeUsernameField2"
+								/></label>
 							</form>
 							<footer>
-								<button type="submit" id="changeUsernameButton" form="formChangeUsername">Process changes</button>
+								<button
+									type="submit"
+									id="changeUsernameButton"
+									form="formChangeUsername"
+								>
+									Process changes
+								</button>
 							</footer>
 						</article>
 					</div>
 					<div>
 						<article class="card" id="changeEmailCard">
 							<h3>Change my email</h3>
-							<form id="formChangeEmail" action="/user/<%= currentUser.id %>/changeEmail" method="post">
-								<label><input type="email" placeholder="New email" name="inputNewEmail" id="changeEmailField1"></label>
-								<label><input type="email" placeholder="Confirm the new email" name="inputNewEmailConfirm" id="changeEmailField2"></label>
+							<form
+								id="formChangeEmail"
+								action="/user/<%= currentUser.id %>/changeEmail"
+								method="post"
+							>
+								<label
+									><input
+										type="email"
+										placeholder="New email"
+										name="inputNewEmail"
+										id="changeEmailField1"
+								/></label>
+								<label
+									><input
+										type="email"
+										placeholder="Confirm the new email"
+										name="inputNewEmailConfirm"
+										id="changeEmailField2"
+								/></label>
 							</form>
 							<footer>
-								<button type="submit" id="changeEmailButton" form="formChangeEmail">Process changes</button>
+								<button
+									type="submit"
+									id="changeEmailButton"
+									form="formChangeEmail"
+								>
+									Process changes
+								</button>
 							</footer>
 						</article>
 					</div>
 					<div>
 						<article class="card" id="changePasswordCard">
 							<h3>Change my password</h3>
-							<form id="formChangePassword" action="/user/<%= currentUser.id %>/changePassword" method="post">
-								<label><input type="password" placeholder="Current password" name="inputCurrentPassword" id="currentPasswordField"></label>
-								<label><input type="password" placeholder="New password" name="inputNewPassword" id="changePasswordField1"></label>
-								<label><input type="password" placeholder="Confirm the new password" name="inputNewPasswordConfirm" id="changePasswordField2"></label>
+							<form
+								id="formChangePassword"
+								action="/user/<%= currentUser.id %>/changePassword"
+								method="post"
+							>
+								<label
+									><input
+										type="password"
+										placeholder="Current password"
+										name="inputCurrentPassword"
+										id="currentPasswordField"
+								/></label>
+								<label
+									><input
+										type="password"
+										placeholder="New password"
+										name="inputNewPassword"
+										id="changePasswordField1"
+								/></label>
+								<label
+									><input
+										type="password"
+										placeholder="Confirm the new password"
+										name="inputNewPasswordConfirm"
+										id="changePasswordField2"
+								/></label>
 							</form>
 							<footer>
-								<button type="submit" id="changePasswordButton" form="formChangePassword">Process changes</button>
+								<button
+									type="submit"
+									id="changePasswordButton"
+									form="formChangePassword"
+								>
+									Process changes
+								</button>
 							</footer>
 						</article>
 					</div>
