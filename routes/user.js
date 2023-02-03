@@ -32,19 +32,19 @@ router.route("/login")
     .get(userCtrl.renderLoginPage)
     .post(passport.authenticate('local', { failureFlash: true, failureRedirect: '/user/login' }), userCtrl.userLogin)
 
-router.get("/logout", userCtrl.userLogout);
+router.get("/logout", isLoggedIn, userCtrl.userLogout);
 
-router.get("/:userId", userCtrl.renderUserPage);
+router.get("/:userId", isLoggedIn, userCtrl.renderUserPage);
 
 router.post("/register", userCtrl.userRegister);
 
-router.post("/recover", userCtrl.userRecover);
+router.post("/recover", isLoggedIn, userCtrl.userRecover);
 
-router.post("/:userId/changeUsername", userCtrl.userChangeUsername);
+router.post("/:userId/changeUsername", isLoggedIn, userCtrl.userChangeUsername);
 
-router.post("/:userId/changeEmail", userCtrl.userChangeEmail);
+router.post("/:userId/changeEmail", isLoggedIn, userCtrl.userChangeEmail);
 
-router.post("/:userId/changePassword", userCtrl.userChangePassword);
+router.post("/:userId/changePassword", isLoggedIn, userCtrl.userChangePassword);
 
 // ----- Exporting the routes to make these available in the app
 module.exports = router;
