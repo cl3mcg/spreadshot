@@ -161,7 +161,7 @@ if (process.env.NODE_ENV !== "production") {
             console.log(`* OK * SPREADSHOT PROJECT (Dev.) - Database connection OK (Mongoose)`);
         })
         .catch(function (err) {
-            console.log(`*!* WARNING *!* SPREADSHOT PROJECT (Dev.) - Database connection ERROR (Mongoose)`);
+            console.log(`*!* ERROR *!* SPREADSHOT PROJECT (Dev.) - Database connection ERROR (Mongoose)`);
             console.log(err);
         });
 } else {
@@ -170,10 +170,10 @@ if (process.env.NODE_ENV !== "production") {
         useUnifiedTopology: true,
     })
         .then(function () {
-            console.log(`${colors.black.bgBrightGreen("* OK *")} MOONSHOT PROJECT (Prod.) - Database connection OK (Mongoose)`);
+            console.log(`* OK * SPREADSHOT PROJECT (Prod.) - Database connection OK (Mongoose)`);
         })
         .catch(function (err) {
-            console.log(`${colors.brightYellow.bgBrightRed("*!* WARNING *!*")} MOONSHOT PROJECT (Prod.) - Database connection ERROR (Mongoose)`);
+            console.log(`*!* ERROR *!* SPREADSHOT PROJECT (Prod.) - Database connection ERROR (Mongoose)`);
             console.log(err);
         });
 }
