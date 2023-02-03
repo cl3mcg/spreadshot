@@ -51,7 +51,6 @@ let login = function () {
             loginButton.form.submit()
         }, 600);
         loginButton.disabled = true
-        console.log("The login form seems validated")
     }
 }
 
@@ -73,7 +72,6 @@ let createAccount = function () {
             createAccountButton.form.submit()
         }, 3500);
         createAccountButton.disabled = true
-        console.log("The create account form seems validated")
     }
 }
 
@@ -91,7 +89,6 @@ let recoverPassword = function () {
             recoveryButton.form.submit()
         }, 3500);
         recoveryButton.disabled = true
-        console.log("The password recovery form seems validated")
     }
 }
 

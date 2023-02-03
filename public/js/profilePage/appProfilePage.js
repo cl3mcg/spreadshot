@@ -36,7 +36,6 @@ let changeUsername = function () {
             changeUsernameButton.form.submit()
         }, 600);
         changeUsernameButton.disabled = true
-        console.log("The change Username form seems validated")
     }
 }
 
@@ -53,7 +52,6 @@ let changeEmail = function () {
             changeEmailButton.form.submit()
         }, 600);
         changeEmailButton.disabled = true
-        console.log("The change Email form seems validated")
     }
 }
 
@@ -70,7 +68,6 @@ let changePassword = function () {
             changePasswordButton.form.submit()
         }, 600);
         changePasswordButton.disabled = true
-        console.log("The change Email form seems validated")
     }
 }
 
