@@ -4,6 +4,7 @@ const User = require("../models/user.js");
 
 // ----- Ressources required
 const catchAsync = require("../utilities/catchasync.js")
+const sendRecoveryEmail = require("../utilities/sendEmail.js")
 
 // ----- Controllers below
 module.exports.renderLoginPage = function (req, res) {
@@ -50,21 +51,21 @@ module.exports.userRegister = catchAsync(async function (req, res) {
         res.redirect("/")
     }
     catch (error) {
-        req.flash('error', error.message);
-        res.redirect('/user/login');
+        req.flash("error", error.message);
+        res.redirect("/user/login");
     }
-    res.redirect('/user/login');
+    res.redirect("/user/login");
 })
 
 module.exports.userRecover = function (req, res) {
-    console.log(req.body)
+    const currentUserId = req.user.id
+    const emailRecoveryLink = "somelink.com" // Input the logic to create a recovery link and change the variable accordingly.
+    sendRecoveryEmail(currentUserId, emailRecoveryLink)
 }
 
 module.exports.userChangeUsername = catchAsync(async function (req, res) {
-    console.log(req.user)
     const paramsUserId = req.params.userId
     const currentUserId = req.user.id
-    console.log(paramsUserId, currentUserId)
     const matchingUser = await User.findById(paramsUserId)
 
     const { inputNewUsername, inputNewUsernameConfirm } = req.body
@@ -97,8 +98,6 @@ module.exports.userChangeUsername = catchAsync(async function (req, res) {
             req.flash("success", "Username changed successfully, you can login again with your new username")
             return res.redirect(`/user/login`)
         });
-        // req.flash("success", "Username changed successfully, you can login again with your new username")
-        // return res.redirect(`/user/login`)
     } catch (error) {
         req.flash("error", "There's been an error, the username has not been updated")
         console.log(error)
