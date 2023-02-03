@@ -8,7 +8,6 @@
 	<label for="bmenub" class="burger pseudo button">Menu</label>
 	<div class="menu">
 		<a href="/about" class="pseudo button">About</a>
-		<a href="#" class="pseudo button">Contact</a>
 		<a <% if (currentUser) { %> href="/user/<%= currentUser.id %> "<% } else { %>href="/user/login"<% } %> class="pseudo button account-nav-btn">Account</a
 		>
 		<% if (currentUser) { %>
