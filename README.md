@@ -4,7 +4,7 @@
 The purpose of the Spreadshot project is to create a boilerplate that can be used to launch new projects rapidly.
 It's a work in progress, at its current stage, the Spreadshot project is able to delivery Homepage as well as basic user registration and operations.
 ### Humble work in progress
-The Spreadshot project is simple and humble mainly used for the purpose of kickstating new projects without having to write everything from scratch from the authentication up to the CSS.
+The Spreadshot project is simple and humble mainly used for the purpose of kickstarting new projects without having to write everything from scratch from the authentication up to the CSS.
 Obviously, the Spreadshot project would not fit every needs and should not be seen as a perfect base to start a project, but more as an experiment workbench to bootstrap prototypes and quickly give life to ideas.
 ## Batteries included
 ### NPM packages
